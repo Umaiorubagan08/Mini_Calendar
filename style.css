@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/*dark and light mode*/
+:root{
+    --primary-color: #edf2fc;
+    --secondary-color: #212121;
+}
+
+.dark-theme{
+    --primary-color: #212121;
+    --secondary-color: #edf2fc;
+}
+
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    background: linear-gradient(#fd746c,#ff9068);
+
+}
+.header{
+    color: black;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bx {
+    font-size: 27px;
+    text-align: center;
+    
+}
+
+
+.calendar{
+    width: 320px;
+    max-width: 400px;
+    height: 250px;
+    background: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px black;
+    margin-bottom: 20px;
+}
+
+.left, .right{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    padding: 20px;
+}
+
+.right{
+    background: #f4351e;
+    color: var(--primary-color);
+    width: 42%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.left{
+    width: 58%;
+    color: var(--secondary-color);
+}
+
+
+#date{
+    font-size: 100px;
+    line-height: 90px;
+
+}
+
+
+#day, #month, #year{
+    font-size: 1.2rem;
+}
+
+
+
+
+#mode { 
+    width: 50px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+#icon{
+    width: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/*media query for smaller device like iphone se, xr*/
+
+@media(max-width: 600px){
+    .calendar {
+        flex-direction: column;
+    }
+
+    .left, .right{
+        padding: 10px;
+    }
+
+    .right{
+        margin-bottom: 10px;
+        border-radius: 10px;
+    }
+
+    #date{
+        font-size: 5rem;
+    }
+
+    #day, #month, #year{
+        font-size: 1rem;
+    }
+}
