@@ -29,3 +29,6 @@ icon.onclick = function(){
         icon.src ="./dark.png"
     }
 }
+
+
+// Changed the image of dark mode 
