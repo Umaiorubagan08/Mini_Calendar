@@ -26,7 +26,7 @@ icon.onclick = function(){
     if(document.body.classList.contains("dark-theme")){
         icon.src = "./light copy.png"
     }else{
-        icon.src ="./dark.png"
+        icon.src ="./sun.png"
     }
 }
 
